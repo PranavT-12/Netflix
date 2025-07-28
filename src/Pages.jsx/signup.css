@@ -1,0 +1,88 @@
+.signup-screen {
+  position: relative;
+  height: 100vh;
+  background: url("https://i.pinimg.com/1200x/19/8b/2f/198b2f01e73b905772279616eccc7c65.jpg") center/cover no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+}
+
+.Soverlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.Nlogo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 250px;
+  object-fit: contain;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.signup-box {
+  background-color: black;
+  padding: 60px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 5px red;
+  z-index: 2;
+  width: 70%;
+  max-width: 400px;
+}
+
+.signup-box h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+
+input {
+  background-color: transparent;
+  color: white;
+  border: 1px solid gray;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.FormBtn {
+  padding: 15px;
+  font-size: 18px;
+  background-color: red;
+  margin-top: 20px;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.FormBtn:hover {
+  box-shadow: 0 0 2px 2px white;
+  transform: scale(1.0);
+}
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+  .Nlogo {
+    position: static;
+    width: 190px;
+    margin: 0 auto 20px;
+    display: block;
+  }
+}

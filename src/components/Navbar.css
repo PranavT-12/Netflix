@@ -1,0 +1,255 @@
+.button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid white;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  box-shadow: 0 6px 16px white;
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+.Navbar {
+  position: fixed;
+  top: 0;
+  width: 96%;
+  height: 75px;
+  background-color: black;
+  border-radius: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 0 20px;
+  z-index: 1;
+}
+
+.Navbar>div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logo {
+  width: 250px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+
+.Sbtn {
+  padding: 8px 14px;
+  border: 1px solid red;
+  border-radius: 10px;
+  background-color: red;
+  margin-left: 10px;
+  margin-top: 15px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.Sbtn:hover {
+  box-shadow: 0 6px 16px #E50914;
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
+}
+
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  border: 1px solid rgb(77, 76, 76);
+  background-color: rgb(77, 76, 76);
+  color: white;
+  cursor: pointer;
+  margin-left: 170px;
+  margin-top: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 16px rgb(184, 24, 155);
+  background-color: black;
+  color: white;
+  border: 1px solid #d4338b;
+  transform: scale(1.05);
+}
+
+.S-input {
+  padding: 12px 16px;
+  width: 320px;
+  background-color: transparent;
+  color: white;
+  box-shadow: 0 0 10px rgb(92, 91, 91);
+  border-radius: 25px;
+  font: 18px;
+  transition: 0.3s;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.S-input:focus {
+  width: 350px;
+  box-shadow: 0 0 10px white;
+}
+
+.S-button {
+  padding: 12px 20px;
+  margin-top: 15px;
+  margin-left: 10px;
+  background-color: transparent;
+  box-shadow: 0 0 10px rgb(92, 91, 91);
+  color: white;
+  border: rgb(92, 91, 91);
+  border-radius: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.S-button:hover {
+  box-shadow: 0 0 10px #E50914;
+  transform: scale(1.05);
+}
+
+
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 75px;
+  right: -260px;
+  width: 220px;
+  height: 35%;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  gap: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.desktop-buttons {
+  display: flex;
+}
+
+.nav-buttons {
+  position: absolute;
+  top: 75px;
+  right: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 10;
+}
+
+.nav-buttons.open {
+  transform: translateX(0%);
+}
+
+/* Ensure it only appears on mobile */
+@media (min-width: 769px) {
+  .nav-buttons {
+    position: static;
+    transform: none;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    background: transparent;
+  }
+}
+
+/* Responsive changes for mobile and tablet */
+@media (max-width: 768px) {
+  .S-input {
+    flex: 1;
+    display: block;
+    max-width: 100px;
+    font-size: 10px;
+    padding: 5px;
+    margin-left: 0;
+  }
+
+  .S-button {
+    display: block;
+    padding: 5px;
+    margin-left: 0px;
+  }
+
+  .desktop-buttons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .logo {
+    width: 120px;
+    margin-left: 0;
+  }
+
+  .Navbar {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  .sidebar .btn,
+  .sidebar .Sbtn,
+  .sidebar .button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Hide hamburger and sidebar on large screens */
+@media (min-width: 769px) {
+  .sidebar {
+    display: none !important;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+}
+
+/* Optional: lower z-index if banner needs to go over navbar */
+.Navbar {
+  z-index: 5; /* reduce if banner z-index is lower */
+}
+
+/* Ensure sidebar overlays properly only on mobile */
+@media (max-width: 768px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+

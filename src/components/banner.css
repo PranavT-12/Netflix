@@ -1,0 +1,112 @@
+
+.bannerBox {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.banner {
+  width: 100%;
+  max-width: 1100px;
+  height: 65vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  padding: 2rem;
+  color: white;
+  cursor: pointer;
+  padding-top: 12rem;
+  margin-top: 40px;
+  box-shadow: #E50914;
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+}
+
+.banner:hover {
+  box-shadow: 0 0 25px 5px #E50914; 
+  transform: scale(1.01);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  /* margin-bottom: 0.5rem; */
+  margin-top: 200px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.sub-title {
+  font-size: 1.2rem;
+  color: #f5f5f5;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
+  margin-top: 25px;
+}
+
+.play-btn {
+  background-color: white;
+  color: #E50914;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  font-size: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.play-btn:hover {
+  box-shadow: 0 6px 16px rgba(229, 9, 20, 0.6);  /* On hover */
+  transform: translateY(-2px);
+}
+
+/* ----------------- Responsive Styles ------------------ */
+
+@media (max-width: 768px) {
+  .banner {
+    height: 50vh;
+    padding-top: 6rem;
+    margin-top: 30px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .sub-title {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .play-btn {
+    display: block;
+    margin: 10px auto 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    height: 45vh;
+    padding: 1rem;
+    padding-top: 5rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    margin-top: 80px;
+  }
+
+  .sub-title {
+    font-size: 0.9rem;
+  }
+
+  .play-btn {
+    font-size: 14px;
+    padding: 0.4rem 1rem;
+  }
+}

@@ -1,0 +1,106 @@
+.Netlogo {
+  position: fixed;
+  width: 250px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-bottom: 20px;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 5;
+}
+
+
+.SignIn-screen {
+  position: relative;
+  height: 100vh;
+  background: url("https://i.pinimg.com/1200x/19/8b/2f/198b2f01e73b905772279616eccc7c65.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.overlay{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.SignIn-box {
+  background-color: black;
+  position: fixed;
+  padding: 40px 30px;
+  color: white;
+  width: 300px;
+  border-radius: 8px;
+  border: 1px solid red;
+  box-shadow: 0 0 20px 5px red;
+  transform: scale(1.0);
+  text-align: center;
+  /* margin-right: 370px; */
+  z-index: 2;
+}
+
+.SignIn-box h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.SignIn-box input {
+  width: 93%;
+  padding: 12px;
+  margin: 8px 0;
+  background: transparent;
+  border: 1px solid gray;
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.SignIn-box button {
+  width: 100%;
+  padding: 12px;
+  background: red;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  /* margin-left: 10px; */
+}
+
+.SignIn-box button:hover {
+  box-shadow: 0 0 2px 2px white;
+  transform: scale(1.0);
+}
+
+.helper-links {
+  margin-top: 20px;
+  font-size: 14px;
+  /* margin-left: 80px; */
+}
+
+.helper-links a {
+  color: white;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+@media (max-width: 480px) {
+  .Netlogo {
+    width: 190px;
+    margin-left: 100px;
+  }
+  .SignIn-box {
+    padding: 30px 20px;
+  }
+  .SignIn-box h2 {
+    font-size: 20px;
+  }
+  .helper-links {
+    font-size: 12px;
+  }
+}
