@@ -24,7 +24,7 @@ export default function SignIn() {
     }
 
     try {
-      const res = await axios.post("https://netflix-ifjl.onrender.com/api/auth/login", {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
         email: email.toLowerCase().trim(),
         password,
       });
