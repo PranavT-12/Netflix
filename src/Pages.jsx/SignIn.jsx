@@ -3,7 +3,7 @@ import "./SignIn.css";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import axios from "../utils/axiosInstance";
 
 export default function SignIn() {
   const [email, setEmail] = useState("");
@@ -15,7 +15,6 @@ export default function SignIn() {
     setPassword("");
   }, []);
 
-
   const HandleSignIn = async (e) => {
     e.preventDefault();
 
@@ -25,8 +24,8 @@ export default function SignIn() {
     }
 
     try {
-      const res = await axios.post("http://localhost:5000/api/auth/login", {
-        email,
+      const res = await axios.post("https://netflix-ifjl.onrender.com/api/auth/login", {
+        email: email.toLowerCase().trim(),
         password,
       });
 

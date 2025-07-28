@@ -3,7 +3,7 @@ import axios from "axios";
 const token = localStorage.getItem("token");
 
 const axiosInstance = axios.create({
-    basedURL: "http://localhost:5000/api/",
+    basedURL: "https://netflix-ifjl.onrender.com",
     headers: {
         Authorization: `Bearer ${token}`,
     },
