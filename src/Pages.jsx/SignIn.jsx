@@ -24,8 +24,7 @@ export default function SignIn() {
     }
 
     try {
-      const backendUrl = import.meta.env.VITE_BACKEND_URL;
-      const res = await axios.post(`${backendUrl}/api/auth/login`, {
+      const res = await axios.post(`/api/auth/login`,{
         email: email.toLowerCase().trim(),
         password,
       });

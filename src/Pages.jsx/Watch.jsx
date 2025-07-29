@@ -64,8 +64,9 @@ const Watch = () => {
         image: movie.image,
         trailerUrl: movie.trailerUrl,
       };
-
-      const res = await fetch("http://localhost:5000/api/favourite/add", {
+ 
+      const backendUrl = import.meta.env.VITE_BACKEND_URL;
+      const res = await fetch(`${backendUrl}/api/favourite/add`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
