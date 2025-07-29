@@ -16,8 +16,9 @@ app.use(cors({
     origin: [
         "http://localhost:5173",
 
-        "https://netflix-wlhz.vercel.app",
-    ],
+        "https://netflix-wlhz.vercel.app",],
+
+    methods: ["GET", "POST", "DELETE"],
     credentials: true,
 }));
 app.use(express.json());
@@ -32,8 +33,8 @@ app.use("/api/favourite", favouriteRoutes);
 
 // ✅ MongoDB Connection
 mongoose.connect(process.env.MONGO_URL || "mongodb://127.0.0.1:27017/netflix")
-.then(() => console.log("✅ MongoDB connected"))
-.catch((err) => console.log("❌ MongoDB connection error:", err));
+    .then(() => console.log("✅ MongoDB connected"))
+    .catch((err) => console.log("❌ MongoDB connection error:", err));
 
 // ✅ Root Route
 app.get("/", (req, res) => {

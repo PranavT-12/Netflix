@@ -11,7 +11,8 @@ const Favourite = () => {
     useEffect(() => {
         const fetchFavourites = async () => {
             try {
-                const res = await axios.get(`http://localhost:5000/api/favourite/${userId}`);
+                const backendUrl = import.meta.env.VITE_BACKEND_URL;
+                const res = await axios.get(`${backendUrl}/api/favourite/${userId}`);
                 setFavMovies(Array.isArray(res.data) ? res.data : []);
             } catch (err) {
                 console.error("Error fetching favourites:", err);
@@ -24,7 +25,8 @@ const Favourite = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/favourite/delete/${id}`);
+            const backendUrl = import.meta.env.VITE_BACKEND_URL;
+            await axios.delete(`${backendUrl}/api/favourite/delete/${id}`);
             setFavMovies((prev) => prev.filter(item => item._id !== id));
             alert("Deleted Successfully");
         } catch (err) {
