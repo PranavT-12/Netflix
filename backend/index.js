@@ -16,7 +16,7 @@ app.use(cors({
     origin: [
         "http://localhost:5173",
 
-        "https://netflix-2jge.vercel.app",
+        "https://netflix-wlhz.vercel.app",
     ],
     credentials: true,
 }));
