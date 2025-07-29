@@ -76,8 +76,7 @@
 /* 📱 Responsive Design */
 @media (max-width: 768px) {
   .row {
-    max-width: 350px;
-    border-radius: 12px;
+    max-width: 355px;
     padding: 10px;
   }
 
