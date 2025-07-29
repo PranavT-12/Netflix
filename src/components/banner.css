@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   background-color: black;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   margin-top: 30px;
 }
 
@@ -66,6 +66,9 @@
 /* ----------------- Responsive Styles ------------------ */
 
 @media (max-width: 768px) {
+  .bannerBox{
+    width: 85%;
+  }
   .banner {
     height: 50vh;
     padding-top: 6rem;
