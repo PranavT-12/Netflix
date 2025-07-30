@@ -7,7 +7,7 @@ A fully functional **Netflix Clone** built using the **MERN stack** with feature
 ## 🚀 Live Demo
 
 - 🌐 Frontend: [https://netflix-wlhz.vercel.app](https://netflix-wlhz.vercel.app)
-- 🔗 Backend: [https://netflix-bmtj.onrender.com](https://netflix-bmtj.onrender.com)
+- 🔗 Backend: [https://netflix-2-ukkl.onrender.com](https://netflix-2-ukkl.onrender.com)
 
 ---
 
