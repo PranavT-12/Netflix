@@ -45,3 +45,30 @@ A fully functional **Netflix Clone** built using the **MERN stack** with feature
 ---
 
 ## 📁 Project Structure
+
+📦 Netflix Clone
+├── 📁 client (Frontend - React)
+│   ├── 📁 public
+│   ├── 📁 src
+│   │   ├── 📁 assets
+│   │   ├── 📁 components
+│   │   ├── 📁 pages
+│   │   ├── 📁 utils
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── index.css
+│   ├── vite.config.js
+│   └── package.json
+│
+├── 📁 server (Backend - Node.js)
+│   ├── 📁 controllers
+│   ├── 📁 models
+│   ├── 📁 routes
+│   ├── 📁 middleware
+│   ├── 📁 config
+│   ├── server.js or index.js
+│   ├── .env
+│   └── package.json
+│
+├── 📄 README.md
+└── 📄 .gitignore
