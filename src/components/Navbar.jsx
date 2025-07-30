@@ -33,6 +33,8 @@ export default function Navbar() {
           className="logo"
           src="https://images.ctfassets.net/y2ske730sjqp/6bhPChRFLRxc17sR8jgKbe/6fa1c6e6f37acdc97ff635cf16ba6fb3/Logos-Readability-Netflix-logo.png"
           alt="Netflix Logo"
+          onClick={() => navigate("/")}
+          style={{ cursor: "pointer" }}
         />
 
         <input
@@ -54,6 +56,7 @@ export default function Navbar() {
 
         {/* Desktop buttons */}
         <div className="nav-buttons desktop-buttons">
+          <div className="navbar-content">
           <button className="btn" onClick={() => navigate("/favourite")}>
             Favourites
           </button>
@@ -63,6 +66,7 @@ export default function Navbar() {
           <button className="button" onClick={handleLogout}>
             Log Out
           </button>
+        </div>
         </div>
       </div>
 

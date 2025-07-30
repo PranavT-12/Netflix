@@ -1,18 +1,18 @@
 
 .bannerBox {
-  padding: 2rem;
+  width: 100%;
+  padding: 3rem;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: black;
-  /* border-radius: 20px; */
   margin-top: 30px;
 }
 
 .banner {
   width: 100%;
-  max-width: 1100px;
-  height: 65vh;
+  min-height: 500px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -20,9 +20,11 @@
   padding: 2rem;
   color: white;
   cursor: pointer;
-  padding-top: 12rem;
+  padding-top: 8rem;
   margin-top: 40px;
   box-shadow: #E50914;
+  justify-content: center;
+  overflow: hidden;
   transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
 }
 
@@ -31,11 +33,14 @@
   transform: scale(1.01);
 }
 
+.banner-Content {
+  margin-top: 300px;
+}
+
 .title {
   font-size: 2.5rem;
   font-weight: bold;
-  /* margin-bottom: 0.5rem; */
-  margin-top: 200px;
+  margin-top: 0;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
@@ -63,15 +68,17 @@
   transform: translateY(-2px);
 }
 
+
 /* ----------------- Responsive Styles ------------------ */
 
 @media (max-width: 768px) {
   .bannerBox{
-    width: 85%;
+    width: 100%;
   }
+
   .banner {
-    height: 50vh;
-    padding-top: 6rem;
+    min-height: 300px;
+    padding-top: 4rem;
     margin-top: 30px;
   }
 
@@ -94,18 +101,20 @@
 
 @media (max-width: 480px) {
   .banner {
-    height: 45vh;
-    padding: 1rem;
-    padding-top: 5rem;
+    height: 60vh;
+  }
+
+  .banner-Content {
+    margin-top: 8rem;
+    text-align: center;
   }
 
   .title {
-    font-size: 1.4rem;
-    margin-top: 80px;
+    font-size: 20px;
   }
 
   .sub-title {
-    font-size: 0.9rem;
+    font-size:14px;
   }
 
   .play-btn {

@@ -7,7 +7,6 @@
   background-color: black;
   width: 100%;
   max-width: 100%;
-  /* border-radius: 20px; */
   overflow-x: hidden;
 }
 
@@ -15,7 +14,7 @@
   font-size: 35px;
   font-weight: 800;
   margin-top: 5px;
-  margin-left: 55px;
+  margin-left: 20px;
   margin-bottom: 5px;
   color: white;
 }
@@ -27,7 +26,8 @@
   overflow-x: auto;
   padding: 20px 0;
   scroll-behavior: smooth;
-  margin-left: 50px;
+  padding-left: 15px;
+  gap: 12px;
   cursor: pointer;
   scroll-snap-type: x mandatory;
 }
@@ -43,6 +43,9 @@
 }
 
 .row__poster {
+  flex: 0 0 auto;
+  width: 120px;
+  height: auto;
   max-width: 45%;
   max-height: 150px;
   object-fit: cover;
@@ -76,37 +79,43 @@
 /* 📱 Responsive Design */
 @media (max-width: 768px) {
   .row {
-    max-width: 355px;
+    margin-left: 0;
+    margin-right: 0;
     padding: 10px;
   }
 
   .row__title {
     font-size: 24px;
-    margin-left: 10px;
+    margin-left: 15px;
   }
 
   .row__posters {
     margin-left: 10px;
-    gap: 8px;
-  }
-
-  .row__poster {
-    max-height: 120px;
-    width: auto;
-  }
-
-  .row__posterLarge {
-    max-height: 200px;
+    gap: 10px;
+    padding-left: 10px;
   }
 
   .row__poster,
   .row__posterLarge {
-    flex: 0 0 80%;
-    max-width: 40%;
-    max-height: 180px;
+    width: 100px;
+    max-height: 140px;
+    flex: 0 0 auto;
   }
 
   .video-player {
-    margin: 10px 0;
+    margin: 10px 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  .row__title {
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .row__poster,
+  .row__posterLarge  {
+    width: 100px;
+    max-height: 150px;
   }
 }
