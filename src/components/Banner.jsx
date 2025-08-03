@@ -17,28 +17,6 @@ export default function Banner({ movie }) {
     navigate(`/watch/${movie.id}`);
   };
 
-  const handleAddToList = async (movie) => {
-  const isLoggedIn = localStorage.getItem("isLoggedIn");
-  const userId = localStorage.getItem("userId");
-
-  if (isLoggedIn !== "true") {
-    alert("Please sign in to add to your list.");
-    return;
-  }
-
-  try {
-    const response = await axios.post("/list/add", {
-      userId,
-      movie,
-    });
-    alert("Added to My List");
-  } catch (err) {
-    console.error("Error adding to list", err);
-    alert("Failed to add to list");
-  }
-};
-
-
   return (
     <div className="bannerBox">
       <div
@@ -73,4 +51,55 @@ export default function Banner({ movie }) {
     </div>
   );
 }
+
+// Banner.jsx
+// import React, { useEffect, useState } from "react";
+// import "./banner.css";
+// import { useNavigate } from "react-router-dom";
+// import axios from "../utils/axiosInstance";
+
+// export default function Banner() {
+//   const navigate = useNavigate();
+//   const [movie, setMovie] = useState(null);
+
+//   useEffect(() => {
+//     // Replace with your actual endpoint
+//     axios.get("/api/banner") // 👈 You must implement this route in your backend!
+//       .then((res) => setMovie(res.data))
+//       .catch((err) => console.error("Banner fetch failed:", err));
+//   }, []);
+
+//   const handleBannerClick = () => {
+//     const isLoggedIn = localStorage.getItem("isLoggedIn");
+//     if (isLoggedIn !== "true") {
+//       alert("Please Sign in first to continue.");
+//       return;
+//     }
+//     navigate(`/watch/${movie.id}`);
+//   };
+
+//   if (!movie) return null;
+
+//   return (
+//     <div className="bannerBox">
+//       <div
+//         className="banner"
+//         style={{
+//           backgroundImage: `url(${movie.image})`,
+//           backgroundSize: "cover",
+//           backgroundPosition: "center",
+//         }}
+//       >
+//         <div className="banner-Content">
+//           <h1 className="title">{movie.name}</h1>
+//           <p className="sub-title">{movie.description}</p>
+//           <button className="play-btn" onClick={handleBannerClick}>
+//             Play
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
 
