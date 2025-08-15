@@ -15,7 +15,9 @@ const PORT = process.env.PORT || 5000;
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://netflix-wlhz.vercel.app",],
+        "https://netflix-wlhz.vercel.app",
+        "https://netflix-2-ukkl.onrender.com"
+    ],
 
     methods: ["GET", "POST", "DELETE"],
     credentials: true,
